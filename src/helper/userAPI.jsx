@@ -2,7 +2,7 @@ import axios from "axios";
 
 const fetchUserData = async () => {
   try {
-    const res = await axios.get("https://carmanagement-backend.vercel.app/api/v1/users/profile", {
+    const res = await axios.get("https://car-management-backend-bm90.onrender.com/api/v1/users/profile", {
       withCredentials: true,
     });
     return res.data.data.user;
