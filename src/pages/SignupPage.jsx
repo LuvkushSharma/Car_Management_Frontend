@@ -96,23 +96,9 @@ const SignupPage = () => {
           }
         );
 
-        setTimerStarts(true);
-
-        const res2 = await axios.post(
-          `${BASE_URL}/api/v1/users/sendOtp`,
-          { email: formData.email },
-          {
-            headers: {
-              "Access-Control-Allow-Origin": "*",
-              "Content-Type": "application/json",
-            },
-            withCredentials: true,
-          }
-        );
-
         setTimeout(() => {
           setTimerStarts(false);
-          navigate("/otp", { replace: true });
+          navigate("/home", { replace: true });
         }, 2000);
       } else {
         const newErrors = {};
